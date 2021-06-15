@@ -1,0 +1,23 @@
+    
+    
+for radius in range(2,3):
+    count = 0
+    for x in range(-radius,radius):
+        for y in range(-radius,radius):
+            if (x**2 + y**2)**0.5 == radius:
+                count += 1
+                print("c",x,y)
+            elif (x**2 + y**2)**0.5 < radius and ((x+1)**2 + (y+1)**2)**0.5 > radius:
+                count +=1
+                print("c",x,y)
+            elif (x**2 + y**2)**0.5 < radius and ((x-1)**2 + (y-1)**2)**0.5 > radius:
+                count +=1
+                print("c",x,y)
+            elif (x**2 + y**2)**0.5 > radius and ((x+1)**2 + (y+1)**2)**0.5 < radius:
+                count +=1
+                print("c",x,y)
+            elif (x**2 + y**2)**0.5 > radius and ((x-1)**2 + (y-1)**2)**0.5 < radius:
+                count += 1
+                print("c",x,y)
+                
+    print(radius,count)
